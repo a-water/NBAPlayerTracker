@@ -1,0 +1,19 @@
+{
+  "name": "nbaplayertracker",
+  "version": "1.0.0",
+  "description": "A way for casual NBA fans to follow players instead of teams",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a-water/NBAPlayerTracker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/a-water/NBAPlayerTracker/issues"
+  },
+  "homepage": "https://github.com/a-water/NBAPlayerTracker#readme"
+}

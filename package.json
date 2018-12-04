@@ -4,7 +4,9 @@
   "description": "A way for casual NBA fans to follow players instead of teams",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "react-scripts start",
+    "build": "react-scripts build"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,19 @@
   "bugs": {
     "url": "https://github.com/a-water/NBAPlayerTracker/issues"
   },
-  "homepage": "https://github.com/a-water/NBAPlayerTracker#readme"
+  "homepage": "https://github.com/a-water/NBAPlayerTracker#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "nba": "^4.5.0",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "^2.1.1"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

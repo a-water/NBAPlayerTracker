@@ -8,6 +8,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build"
   },
+  "proxy": "http://localhost:3333",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/a-water/NBAPlayerTracker.git"
@@ -19,12 +20,16 @@
   },
   "homepage": "https://github.com/a-water/NBAPlayerTracker#readme",
   "dependencies": {
+    "axios": "^0.18.0",
     "express": "^4.16.4",
     "nba": "^4.5.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
+    "react-redux": "^5.1.1",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "^2.1.1"
+    "react-scripts": "^2.1.1",
+    "redux": "^4.0.1",
+    "redux-promise": "^0.6.0"
   },
   "browserslist": [
     ">0.2%",

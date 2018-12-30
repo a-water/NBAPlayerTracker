@@ -1,13 +1,13 @@
 {
-  "main.css": "/a-water/NBAPlayerTracker/static/css/main.38852208.chunk.css",
-  "main.js": "/a-water/NBAPlayerTracker/static/js/main.ec843423.chunk.js",
-  "main.js.map": "/a-water/NBAPlayerTracker/static/js/main.ec843423.chunk.js.map",
-  "static/js/1.971eda06.chunk.js": "/a-water/NBAPlayerTracker/static/js/1.971eda06.chunk.js",
-  "static/js/1.971eda06.chunk.js.map": "/a-water/NBAPlayerTracker/static/js/1.971eda06.chunk.js.map",
-  "runtime~main.js": "/a-water/NBAPlayerTracker/static/js/runtime~main.88528221.js",
-  "runtime~main.js.map": "/a-water/NBAPlayerTracker/static/js/runtime~main.88528221.js.map",
-  "static/css/main.38852208.chunk.css.map": "/a-water/NBAPlayerTracker/static/css/main.38852208.chunk.css.map",
-  "index.html": "/a-water/NBAPlayerTracker/index.html",
-  "precache-manifest.57c491ae9a01e94529b3899ef6d12752.js": "/a-water/NBAPlayerTracker/precache-manifest.57c491ae9a01e94529b3899ef6d12752.js",
-  "service-worker.js": "/a-water/NBAPlayerTracker/service-worker.js"
+  "main.css": "./static/css/main.38852208.chunk.css",
+  "main.js": "./static/js/main.ec843423.chunk.js",
+  "main.js.map": "./static/js/main.ec843423.chunk.js.map",
+  "static/js/1.9ac9747b.chunk.js": "./static/js/1.9ac9747b.chunk.js",
+  "static/js/1.9ac9747b.chunk.js.map": "./static/js/1.9ac9747b.chunk.js.map",
+  "runtime~main.js": "./static/js/runtime~main.4a686d48.js",
+  "runtime~main.js.map": "./static/js/runtime~main.4a686d48.js.map",
+  "static/css/main.38852208.chunk.css.map": "./static/css/main.38852208.chunk.css.map",
+  "index.html": "./index.html",
+  "precache-manifest.fef4559e8aa8a64f9924394daccaee17.js": "./precache-manifest.fef4559e8aa8a64f9924394daccaee17.js",
+  "service-worker.js": "./service-worker.js"
 }

@@ -16,6 +16,12 @@ app.get('/search_players', function (req, res) {
   const searchTerm = req.query.searchTerm;
 
   let playersSearch = nba.searchPlayers(searchTerm);
+  console.log('found:', playersSearch);
+  
+  if(searchTerm === null || playersSearch.length === 0){    
+    return res.status(200).send("No player found");
+  }
+  
   nba.stats.playerInfo({PlayerID: playersSearch[0].playerId})
     .then(info => {
       res.status(200).json(info);

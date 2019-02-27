@@ -20,7 +20,7 @@
 }
 
 .search-button {
-  background: #76c8e9;
+  background: #94f6c8;
   color: white;
   border: 0;
   -webkit-appearance: none;
@@ -35,11 +35,11 @@
 }
 
 .search-button:hover {
-  background: #5591a8;
+  background: #6db392;
   color: #d6d5d5;
 }
 
 .search-button:active {
-  background: #2b4955;
+  background: #3f6855;
   color: #7e7d7d;
 }

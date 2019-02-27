@@ -28,3 +28,27 @@
   font-size: 1.1em;
   margin: 0;
 }
+
+.player-results {
+  position: relative;
+}
+
+.no-player-found-modal {
+  width: 500px;
+  height: 500px;
+  border-radius: 250px;
+  background: #d05555;
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.no-player-found-modal > p {
+  font-size: 40px;
+}
+
+.modal-hidden {
+  display: none;
+}

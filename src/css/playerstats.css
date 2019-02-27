@@ -1,0 +1,30 @@
+.player-highlights {
+  background: #f4eeec;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 500px;
+  height: 500px;
+  border-radius: 250px;
+}
+
+.player-highlights p {
+
+}
+
+.player-name {
+  font-size: 4.0em;
+  margin-bottom: 30px;  
+}
+
+.player-stat {
+  font-size: 1.3em;
+  margin: 6px 0 6px 0;
+}
+
+.label {
+  color: #606784;
+  font-size: 1.1em;
+  margin: 0;
+}

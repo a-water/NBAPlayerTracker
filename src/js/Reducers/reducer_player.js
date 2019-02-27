@@ -1,10 +1,10 @@
-import { FIND_PLAYER } from '../Actions/index';
+import { SEARCH_PLAYERS } from '../Actions/index';
 
 export default function(state = [], action) {
   switch(action.type) {
 
-    case FIND_PLAYER:
-      console.log("action recevied: ", action.payload);
+    case SEARCH_PLAYERS:
+      console.log("action recevied:", action.payload.data);
       return [ action.payload.data, ...state ];
   }
 

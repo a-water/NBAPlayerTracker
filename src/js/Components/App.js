@@ -5,7 +5,7 @@ import PlayerResult from '../Containers/PlayerResult';
 export default class App extends Component {
     render() {
       return (
-        <div>
+        <div className="parent">
           <PlayerSearchBar />
           <PlayerResult />
         </div>

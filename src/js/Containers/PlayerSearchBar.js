@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { setPlayer } from '../Actions/index';
+import { searchPlayers } from '../Actions/index';
 import axios from 'axios';
 
 class PlayerSearchBar extends Component {
@@ -20,14 +20,14 @@ class PlayerSearchBar extends Component {
   onFormSubmit(event) {
     event.preventDefault();
 
-    const url = `/find_player?player=${this.state.player}`;
+    const url = `/search_players?searchTerm=${ this.state.player }`;
     axios.get(url)
     .then(response => {
       console.log("Response: ", response);
-      this.props.setPlayer(response);
+      this.props.searchPlayers(response);
     })
     .catch(error => {
-      this.props.setPlayer(error);
+      console.log('Error searching players:', error);
     });
 
     this.setState({ player: '' });
@@ -35,7 +35,7 @@ class PlayerSearchBar extends Component {
 
   render() {
     return(
-      <form className="input-group" onSubmit={this.onFormSubmit}>
+      <form className="input-group" onSubmit={ this.onFormSubmit }>
         <input
           placeholder="Search for a player"
           className="form-input"
@@ -49,7 +49,7 @@ class PlayerSearchBar extends Component {
 }
 
 function mapStateToProps(dispatch) {
-  return bindActionCreators({ setPlayer }, dispatch);
+  return bindActionCreators({ searchPlayers }, dispatch);
 }
 
 export default connect(null, mapStateToProps)(PlayerSearchBar);

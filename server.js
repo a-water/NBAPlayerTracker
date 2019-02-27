@@ -1,7 +1,7 @@
 const express = require('express');
 
 const path = require('path');
-const PORT = process.env.PORT || 3333;
+const PORT = process.env.PORT || 4000;
 const app = express();
 const nba = require('nba');
 
@@ -12,12 +12,19 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
-app.get('/find_player', function (req, res) {
-  // console.log(req.query);
-  const player = req.query.player;
-  let playerSearch = nba.findPlayer(player);
-  console.log("Find Player: ", playerSearch);
-  res.send(playerSearch.fullName);
+app.get('/search_players', function (req, res) {
+  const searchTerm = req.query.searchTerm;
+
+  let playersSearch = nba.searchPlayers(searchTerm);
+  nba.stats.playerInfo({PlayerID: playersSearch[0].playerId})
+    .then(info => {
+      console.log('stats:', info);
+      res.status(200).json(info);
+    })
+    .catch(err => {
+      res.status(500).json(err);
+    });
+  
 })
 
 app.listen(PORT, () => {

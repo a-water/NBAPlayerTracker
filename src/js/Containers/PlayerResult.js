@@ -6,8 +6,7 @@ import PlayerData from '../PlayerData';
 class PlayerResult extends Component {
 
   renderPlayerInfo(playerResult) {
-    const playerStats = playerResult.playerHeadlineStats[0];    
-    let player = new PlayerData(playerStats.playerName, playerStats.pts, playerStats.ast, playerStats.reb);
+    let player = new PlayerData(playerResult.playerName, playerResult.pts, playerResult.ast, playerResult.reb);
     return(
       <div className="player-highlights">
         <p className="player-name">{ player.name }</p>
@@ -18,13 +17,23 @@ class PlayerResult extends Component {
         <p className="label">Rebounds Per Game</p>
         <p className="player-stat">{ player.rpg }</p>
       </div>
-    )
+    );
   }
 
   render() {    
     return (
       <div>
-        { this.props.player[0] ? this.renderPlayerInfo(this.props.player[0]) : "" }
+        { this.props.player[0] ? 
+            this.renderPlayerInfo(this.props.player[0].playerHeadlineStats[0]) 
+          :  
+            this.renderPlayerInfo({
+                playerName: "",
+                pts: "---",
+                ast: "---",
+                reb: "---"
+              }
+            )
+        }
       </div>
     )
   }

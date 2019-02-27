@@ -12,6 +12,7 @@
   border: 0;
   vertical-align: top;
   font-family: 'Helvetica', 'Arial', sans-serif;
+  border-radius: 3px;
 }
 
 .form-input:focus, textarea:focus {
@@ -30,6 +31,7 @@
   margin-left: 10px;
   font-size: 1.2em;
   font-family: 'Helvetica', 'Arial', sans-serif;
+  border-radius: 3px;
 }
 
 .search-button:hover {

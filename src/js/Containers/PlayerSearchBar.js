@@ -8,17 +8,28 @@ class PlayerSearchBar extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { player: '' };
+    this.state = { 
+      player: '',
+      displayErrors: false 
+    };
     this.onInputChange = this.onInputChange.bind(this);
     this.onFormSubmit = this.onFormSubmit.bind(this);    
   }
 
   onInputChange(event) {
-    this.setState({ player: event.target.value });
+    const nameRegex = RegExp(/^[a-z ,.'-]+$/i);
+    if(nameRegex.test(event.target.value) || event.target.value === ''){
+      this.setState({ player: event.target.value });
+    }
   }
 
   onFormSubmit(event) {
     event.preventDefault();
+
+    if(!event.target.checkValidity()) {
+      this.setState ({ displayErrors: true });
+      return;
+    }
 
     const url = `/search_players?searchTerm=${ this.state.player }`;
     axios.get(url)
@@ -30,17 +41,23 @@ class PlayerSearchBar extends Component {
       console.log('Error searching players:', error);
     });
 
-    this.setState({ player: '' });
+    this.setState({
+      player: '', 
+      displayErrors: false
+    });
   }
 
   render() {
     return(
-      <form className="input-group" onSubmit={ this.onFormSubmit }>
+      <form className="input-group" noValidate onSubmit={ this.onFormSubmit }>
         <input
           placeholder="Search for a player"
-          className="form-input"
+          className={`form-input ${this.state.displayErrors ? "displayErrors" : ""}`}
           value={this.state.player}
           onChange={this.onInputChange}
+          type="text"
+          autoFocus
+          required
         />
         <button type="submit" className="search-button">Search</button>
       </form>

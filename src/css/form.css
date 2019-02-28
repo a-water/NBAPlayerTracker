@@ -4,7 +4,7 @@
 }
 
 .form-input {
-  width: 300px;
+  width: 330px;
   height: 3rem;
   font-size: 1.2em;
   box-sizing: border-box;
@@ -19,14 +19,24 @@
   outline: none;
 }
 
+.displayErrors {
+  /* border: 3px solid #d76262; */
+  animation: animate-border 0.3s 3;
+}
+
+@keyframes animate-border {
+  from { border: 0px solid #ff9c9c; }
+  to { border: 5px solid #d76262; }
+}
+
 .search-button {
-  background: #94f6c8;
+  background: #7784a4;
   color: white;
   border: 0;
   -webkit-appearance: none;
   border-radius: 0;
   -webkit-border-radius: 0;
-  width: 100px;
+  width: 120px;
   height: 3rem;
   margin-left: 10px;
   font-size: 1.2em;
@@ -35,11 +45,11 @@
 }
 
 .search-button:hover {
-  background: #6db392;
+  background: #45506c;
   color: #d6d5d5;
 }
 
 .search-button:active {
-  background: #3f6855;
+  background: #1c253c;
   color: #7e7d7d;
 }

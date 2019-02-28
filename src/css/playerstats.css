@@ -45,8 +45,14 @@
   justify-content: center;
 }
 
+@keyframes fade-in-text {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 .no-player-found-modal > p {
   font-size: 40px;
+  animation: fade-in-text 2s;
 }
 
 .modal-hidden {

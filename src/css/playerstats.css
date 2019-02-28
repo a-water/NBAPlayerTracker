@@ -7,15 +7,20 @@
   width: 500px;
   height: 500px;
   border-radius: 250px;
+  overflow: hidden;
+  position: relative;
 }
 
-.player-highlights p {
-
+.team-img {
+  width: 400px;
+  position: absolute;
+  opacity: 0.1;
 }
 
 .player-name {
   font-size: 4.0em;
-  margin-bottom: 30px;  
+  margin-bottom: 30px;
+  min-height: 64px;
 }
 
 .player-stat {

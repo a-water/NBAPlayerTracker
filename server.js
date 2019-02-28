@@ -23,7 +23,7 @@ app.get('/search_players', function (req, res) {
   }
   
   nba.stats.playerInfo({PlayerID: playersSearch[0].playerId})
-    .then(info => {
+    .then(info => {      
       res.status(200).json(info);
     })
     .catch(err => {

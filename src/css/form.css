@@ -16,12 +16,11 @@
   background: #f4eeec;
 }
 
-.form-input:focus, textarea:focus {
+.form-input:focus {
   outline: none;
 }
 
 .displayErrors {
-  /* border: 3px solid #d76262; */
   animation: animate-border 0.3s 3;
 }
 

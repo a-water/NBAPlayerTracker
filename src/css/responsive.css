@@ -1,0 +1,26 @@
+@media screen and (max-width:500px) {
+
+  /* Form */
+  .form-input {
+    width: 200px;
+  }
+  /*  */
+
+  /* Player Stats */
+  .player-highlights {
+    width: 350px;
+    height: 350px;
+    border-radius: 175px;
+  }
+
+  .player-name {
+    font-size: 2.2em;
+  }
+
+  .no-player-found-modal {
+    width: 350px;
+    height: 350px;
+    border-radius: 175px;
+  }
+  /*  */
+}

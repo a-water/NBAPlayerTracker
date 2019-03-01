@@ -36,7 +36,6 @@ class PlayerResult extends Component {
   }
 
   render() {
-    console.log('player', this.props.player);
     let team = "NBA"
     if(this.props.player.length > 0 && this.props.player[0] !== this.NO_PLAYER_FOUND) {
       team = this.props.player[0].commonPlayerInfo[0].teamAbbreviation;

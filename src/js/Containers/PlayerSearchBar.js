@@ -30,6 +30,8 @@ class PlayerSearchBar extends Component {
       this.setState ({ displayErrors: true });
       return;
     }
+    
+    event.target.blur();
 
     const url = `/search_players?searchTerm=${ this.state.player }`;
     axios.get(url)
